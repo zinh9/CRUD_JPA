@@ -5,26 +5,23 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
 import modelo.Pessoa;
+import infra.DAO;
 
 public class Delete {
 	public static void deletarPessoa(Long id) {
 		if(id instanceof Long) {
-			EntityManagerFactory emf = Persistence.createEntityManagerFactory("exercicios-jpa");
-			EntityManager em = emf.createEntityManager();
+			DAO<Pessoa> dao = new DAO<Pessoa>(Pessoa.class);
 			
 			Pessoa pessoa = em.find(Pessoa.class, id);
 			
 			if(pessoa != null) {
-				em.getTransaction().begin();
-				em.remove(pessoa);
-				em.getTransaction().commit();
+				dao.delete(pessoa);
 				
 			} else {
 				System.out.println("A pessoa não está no banco de dados!");
 			}
 			
-			em.close();
-			emf.close();
+			dao.close();
 		} else {
 			System.out.println("O ID não é do tipo necessario para continuar a operação!");
 		}
