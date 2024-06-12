@@ -22,11 +22,11 @@ Contém as classes responsáveis pelas operações CRUD:
 * Delete: Classe para deletar pessoas do banco de dados.
 * TesteCrud: Classe com o método main para interagir com o usuário e executar as operações CRUD.
 
-###Pacote `infra`
+### Pacote `infra`
 
 Este é um código Java que implementa um Objeto de Acesso a Dados Genérico (DAO) utilizando a API de Persistência do Java (JPA). Ele fornece funcionalidades básicas de CRUD (Create, Read, Update, Delete) para qualquer tipo de entidade.
 
-####Funcionalidades:
+#### Funcionalidades:
 
 1. Operações CRUD: Suporta inserção, recuperação, atualização e exclusão de entidades no banco de dados.
 
