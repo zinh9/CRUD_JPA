@@ -24,7 +24,19 @@ Contém as classes responsáveis pelas operações CRUD:
 
 ###Pacote `infra`
 
-O pacote 
+Este é um código Java que implementa um Objeto de Acesso a Dados Genérico (DAO) utilizando a API de Persistência do Java (JPA). Ele fornece funcionalidades básicas de CRUD (Create, Read, Update, Delete) para qualquer tipo de entidade.
+
+####Funcionalidades:
+
+1. Operações CRUD: Suporta inserção, recuperação, atualização e exclusão de entidades no banco de dados.
+
+2. Transações Atômicas: Permite agrupar múltiplas operações em uma única transação para garantir atomicidade.
+
+3. Gestão de Entidades: Gerencia entidades utilizando o `EntityManager` da JPA para sincronização adequada com o contexto de persistência.
+
+4. Inicialização Automática: Inicializa automaticamente o `EntityManagerFactory` para garantir eficiência na conexão com o banco de dados.
+
+5. Limpeza de Recursos: Fecha o `EntityManager` e o `EntityManagerFactory` para liberar recursos do banco de dados quando não são mais necessários.
 
 ## Conclusão
 
