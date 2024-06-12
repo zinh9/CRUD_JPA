@@ -40,4 +40,4 @@ Este é um código Java que implementa um Objeto de Acesso a Dados Genérico (DA
 
 ## Conclusão
 
-Este projeto foi desenvolvido para colocar em prática os conhecimentos de JPA adquiridos, incluindo mapeamento de entidades, gerenciamento de transações e operações CRUD básicas. É um ponto de partida para projetos mais complexos que envolvem persistência de dados em Java.
+Este projeto foi desenvolvido para colocar em prática os conhecimentos de JPA adquiridos, incluindo mapeamento de entidades, gerenciamento de transações, operações CRUD básicas e implementa o padrão DAO. É um ponto de partida para projetos mais complexos que envolvem persistência de dados em Java.
