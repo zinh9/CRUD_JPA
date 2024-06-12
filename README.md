@@ -12,7 +12,7 @@ O projeto consiste em uma aplicação Java que gerencia informações de pessoas
 
 Contém a entidade `Pessoa` mapeada com as anotações JPA.
 
-### Pacote CRUD
+### Pacote `CRUD`
 
 Contém as classes responsáveis pelas operações CRUD:
 
@@ -21,6 +21,10 @@ Contém as classes responsáveis pelas operações CRUD:
 * Update: Classe para atualizar informações de pessoas no banco de dados.
 * Delete: Classe para deletar pessoas do banco de dados.
 * TesteCrud: Classe com o método main para interagir com o usuário e executar as operações CRUD.
+
+###Pacote `infra`
+
+O pacote 
 
 ## Conclusão
 
