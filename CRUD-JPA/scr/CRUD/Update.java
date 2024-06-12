@@ -2,30 +2,23 @@ package CRUD;
 
 import java.util.Scanner;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
-
 import modelo.Pessoa;
+import infra.DAO;
 
 public class Update {
 	public static void atualizarPessoa(Long id) {
 		if(id instanceof Long) {
 			Scanner in = new Scanner(System.in);
-			
-			EntityManagerFactory emf = Persistence.createEntityManagerFactory("exercicios-jpa");
-			EntityManager em = emf.createEntityManager();
+
+			DAO<Pessoa> dao = new DAO<Pessoa>(Pessoa.class);
 			
 			System.out.println("Digite uma das opções que deseja atualizar:\n\n"
 					+ "1) Nome\n2) Sobrenome\n3) CPF\n4) Email\n5) Idade\n\n"
 					+ "Opção: ");
 			int opcao = in.nextInt();
 			in.nextLine();
-			
-			em.getTransaction().begin();
-			
+						
 			Pessoa pessoa = em.find(Pessoa.class, id);
-			em.detach(pessoa);
 			
 			switch (opcao) {
 			case 1:
@@ -33,7 +26,7 @@ public class Update {
 				String nome = in.nextLine();
 				
 				pessoa.setCpf(nome);
-				
+
 				break;
 				
 			case 2:
@@ -72,9 +65,7 @@ public class Update {
 				break;
 			}
 			
-			em.merge(pessoa);
-			
-			em.getTransaction().commit();
+			dao.openTransaction().update(pessoa).closeTransaction();
 			
 			System.out.println("Pessoa atualizada com sucesso!");
 			
