@@ -65,7 +65,7 @@ public class Update {
 				break;
 			}
 			
-			dao.openTransaction().update(pessoa).closeTransaction();
+			dao.openTransaction().update(pessoa).closeTransaction().close();
 			
 			System.out.println("Pessoa atualizada com sucesso!");
 			
