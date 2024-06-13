@@ -18,7 +18,7 @@ public class Update {
 			int opcao = in.nextInt();
 			in.nextLine();
 						
-			Pessoa pessoa = em.find(Pessoa.class, id);
+			Pessoa pessoa = dao.getRecord(Pessoa.class, id);
 			
 			switch (opcao) {
 			case 1:
