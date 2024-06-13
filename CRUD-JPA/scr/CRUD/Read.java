@@ -8,7 +8,7 @@ public class Read {
 		if(id instanceof Long) {
 			DAO<Pessoa> dao = new DAO<Pessoa>(Pessoa.class);
 
-			List<Pessoa> pessoas = dao.getAll();
+			List<Pessoa> pessoas = dao.getAll().close();
 
 			for(Pessoa pessoa : pessoas){
 				if(pessoa.getId() == id){
@@ -22,8 +22,6 @@ public class Read {
 					System.out.println("Pessoa não encontrada!");
 				}
 			}
-
-			dao.close();
 		} else {
 			System.out.println("O ID não é do tipo necessario para continuar a operação!");
 		}
