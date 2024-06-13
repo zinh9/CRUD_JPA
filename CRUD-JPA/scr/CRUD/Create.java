@@ -11,14 +11,12 @@ public class Create {
 		Pessoa pessoa = new Pessoa(nome, sobrenome, cpf, email, idade);
 		
 		if(pessoa != null) {
-			dao.insertAtomic(pessoa);
+			dao.insertAtomic(pessoa).close();
 			
 			System.out.println("Pessoa inserida com sucesso!");
 		} else {
 			System.out.println("Não foi possivel inserir a pessoa!");
 		}
-
-		dao.close();
 	}
 
 }
