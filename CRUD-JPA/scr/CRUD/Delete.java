@@ -11,13 +11,11 @@ public class Delete {
 			Pessoa pessoa = em.find(Pessoa.class, id);
 			
 			if(pessoa != null) {
-				dao.delete(pessoa);
+				dao.delete(pessoa).close();
 				
 			} else {
 				System.out.println("A pessoa não está no banco de dados!");
 			}
-			
-			dao.close();
 		} else {
 			System.out.println("O ID não é do tipo necessario para continuar a operação!");
 		}
