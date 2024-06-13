@@ -24,7 +24,7 @@ Contém as classes responsáveis pelas operações CRUD:
 
 ### Pacote `infra`
 
-Este é um código Java que implementa um Objeto de Acesso a Dados Genérico (DAO) utilizando a API de Persistência do Java (JPA). Ele fornece funcionalidades básicas de CRUD (Create, Read, Update, Delete) para qualquer tipo de entidade.
+Este é um código Java que implementa um Objeto de Acesso a Dados Genérico (DAO) utilizando o JPA. Ele fornece funcionalidades básicas de CRUD para qualquer tipo de entidade.
 
 #### Funcionalidades:
 
