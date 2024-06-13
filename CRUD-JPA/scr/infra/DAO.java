@@ -45,6 +45,11 @@ public class DAO<E> {
 	public DAO<E> insertAtomic(E entity){
 	    	return this.openTransaction().insert(entity).closeTransaction();
 	}
+
+	public DAO<E> getRecord(E entity, Long id){
+	    	em.find(entity, id);
+	    	return this;
+	}
 	
 	public List<E> getAll(){
 	    	return this.getAll(10, 0);
