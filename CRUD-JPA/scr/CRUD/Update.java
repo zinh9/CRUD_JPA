@@ -10,7 +10,7 @@ public class Update {
 		if(id instanceof Long) {
 			Scanner in = new Scanner(System.in);
 
-			DAO<Pessoa> dao = new DAO<Pessoa>(Pessoa.class);
+			DAO<Pessoa> dao = new DAO<>(Pessoa.class);
 			
 			System.out.println("Digite uma das opções que deseja atualizar:\n\n"
 					+ "1) Nome\n2) Sobrenome\n3) CPF\n4) Email\n5) Idade\n\n"
