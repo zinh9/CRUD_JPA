@@ -11,6 +11,7 @@ O projeto consiste em uma aplicação Java que gerencia informações de pessoas
 ### Pacote `modelo`
 
 Contém a entidade `Pessoa` mapeada com as anotações JPA.
+Contém a entidade `Contato` mapeada com as anotações JPA, onde tem um relacionamento Um Para Muitos.
 
 ### Pacote `CRUD`
 
