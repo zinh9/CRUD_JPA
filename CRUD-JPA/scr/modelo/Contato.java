@@ -1,3 +1,5 @@
+package modelo;
+
 import java.util.List;
 import java.util.ArrayList;
 import javax.persistence.Entity;
@@ -14,12 +16,15 @@ public class Contato {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-  
+
+    @JoinColumn(nullable = true)
     private String tipo;
-  
+
+    @JoinColumn(nullable = true)
     private String numero;
 
     @OneToMany
+    @JoinColumn(name = "contato_id")
     private List<Pessoa> pessoas = new ArrayList<>();
 
     public Contato() {
